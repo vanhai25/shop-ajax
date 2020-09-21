@@ -1,0 +1,24 @@
+RewriteEngine on
+
+
+
+RewriteRule ^trang-chu$ index.php?controller=home 
+RewriteRule ^gio-hang$ index.php?controller=cart
+RewriteRule ^hoa-don$ index.php?controller=bill
+RewriteRule ^blog$ index.php?controller=blog
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?controller=category&url=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?controller=category&url=$1&pagi=$2
+
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?controller=news&title=$1&id=$2
+RewriteRule ^Tat-ca/([a-zA-Z0-9_-]+)-([0-9]+)$ index.php?controller=product&title=$1&id=$2
+
+
+RewriteRule ^not-found$ 404.html
+
+
+
+
+
+
